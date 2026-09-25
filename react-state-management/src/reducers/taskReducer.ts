@@ -7,7 +7,7 @@ type Action =
     | { type: "add"; payload: string }
     | { type: "remove"; payload: number };
 
-export default function taskReducer(state: State, action: Action): State {
+export  function taskReducer(state: State, action: Action): State {
     switch (action.type) {
         case "add":
             return [...state, { id: Date.now(), text: action.payload}];
